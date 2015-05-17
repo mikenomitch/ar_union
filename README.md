@@ -1,6 +1,6 @@
 # ArUnion
 
-Patch to ActiveRecord::Relation allowing for unioned scopes and ordered union scopes.
+Patch to ActiveRecord::Relation allowing for unioned scopes.
 
 If you have a sharded DB, beware of use on cross-shard queries.
 
@@ -28,11 +28,9 @@ Used to create union SQL call scope that can chained
       :other_scope_on_user, :one_more_scope_on_user
     ).where(foo: "bar").pluck(:foo)
 
-use ordered_union to maintain order:
-
-     $ User.scope_on_user.ordered_union(
-      :other_scope_on_user, :one_more_scope_on_user
-    ).where(foo: "bar").pluck(:foo)
+Note: this does not return the results in any guaranteed order.
+If anybody knows how to maintain the order of the scopes being unioned,
+open or a PR or ping me and I'd be happy to add another method.
 
 
 ## Contributing
