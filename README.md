@@ -1,4 +1,4 @@
-# ArUnion
+# AR_Union
 
 Patch to ActiveRecord::Relation allowing for unioned scopes.
 
