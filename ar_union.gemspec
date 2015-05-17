@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mnomitch@instructure.com"]
   spec.summary       = %q{AR Relation patch allowing for chainable union scopes}
   spec.description   = %q{AR Relation patch allowing for chainable union scopes}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/mikenomitch/ar_union"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
